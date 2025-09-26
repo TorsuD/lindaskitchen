@@ -125,8 +125,7 @@
 
 @font-face {
   font-family: "ClashDisplay";
-  src: url("/fonts/ClashGrotesk_complete/Fonts/OTF/ClashGrotesk-Bold.otf")
-    format("truetype");
+  src: url("/fonts/ClashGrotesk-Bold.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
