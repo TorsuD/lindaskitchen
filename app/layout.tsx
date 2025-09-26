@@ -34,7 +34,7 @@ export default function RootLayout({
         > */}
         <Header />
         {/* <div className="md:pb-36 pb-10 flex-1 max-w-7xl lg:mx-auto md:px-10 px-3 w-full"> */}
-        {children}
+        <div className="pt-[90px]">{children}</div>
         {/* </div> */}
         {/* </ThemeProvider> */}
       </body>

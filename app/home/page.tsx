@@ -9,7 +9,7 @@ import { Fade, Slide } from "react-awesome-reveal";
 
 export default function HomePage() {
   return (
-    <main className="pt-[90px]">
+    <main>
       <div className="relative grid place-items-center h-[600px] w-full bg-green-100 -z-10">
         <div className="flex flex-col gap-3 items-center justify-center text-center">
           <h1 className="text-4xl lg:text-6xl header-font font-bold w-full lg:w-[800px]">
