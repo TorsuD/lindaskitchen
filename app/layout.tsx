@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import { APP_DESCRIPTION, APP_NAME } from "@/lib/constant";
+import { ThemeProvider } from "@/lib/provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const font = Quicksand({
+  weight: "400",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Linda's Kitchen",
-  description: "All you can eat.",
+  title: {
+    template: `%s | ${APP_NAME}`,
+    default: APP_NAME,
+  },
+  description: APP_DESCRIPTION,
 };
 
 export default function RootLayout({
@@ -23,11 +24,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${font.className} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {/* <div className="md:pb-36 pb-10 flex-1 max-w-7xl lg:mx-auto md:px-10 px-3 w-full"> */}
+          {children}
+          {/* </div> */}
+        </ThemeProvider>
       </body>
     </html>
   );
