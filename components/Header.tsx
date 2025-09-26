@@ -14,7 +14,7 @@ export default function Header() {
   const router = useRouter();
   const path = usePathname();
   return (
-    <div className="px-5 py-4 z-30 bg-white">
+    <div className="fixed px-5 py-4 z-50 w-full bg-white">
       <div className="flex items-center justify-between">
         {/* LOGO */}
         <Link href={"/"}>

@@ -124,12 +124,23 @@
 }
 
 @font-face {
-  font-family: "ClashDisplay";
+  font-family: "ClashGrotesk";
   src: url("/fonts/ClashGrotesk-Bold.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "ClashDisplay";
+  src: url("/fonts/ClashDisplay-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .header-font {
+  font-family: "ClashDisplay", sans-serif;
+}
+
+.subHeader-font {
   font-family: "ClashDisplay", sans-serif;
 }

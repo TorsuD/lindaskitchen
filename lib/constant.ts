@@ -48,3 +48,20 @@ export const navItemsMobileView = [
     href: "/order",
   },
 ];
+
+export const stepsToOrder = [
+  {
+    id: 1,
+    title: "Check our menu.",
+  },
+
+  {
+    id: 2,
+    title: "Call to place your order.",
+  },
+
+  {
+    id: 3,
+    title: "Pick up on Saturday & enjoy.",
+  },
+];
