@@ -14,7 +14,7 @@ export default function Header() {
   const router = useRouter();
   const path = usePathname();
   return (
-    <div className="fixed px-5 py-4 z-50 w-full bg-white">
+    <div className="fixed px-5 py-4 z-50 w-full bg-white shadow-md">
       <div className="flex items-center justify-between">
         {/* LOGO */}
         <Link href={"/"}>
@@ -51,7 +51,7 @@ export default function Header() {
         <div className="hidden lg:flex lg:items-center lg:gap-4">
           {/* <ThemeSwitch /> */}
           <Button
-            className="bg-[var(--main-color)] text-lg rounded-ssm"
+            className="bg-[var(--main-color)] px-8 py-4 text-lg rounded-xl"
             onClick={() => {
               router.push("/order");
             }}

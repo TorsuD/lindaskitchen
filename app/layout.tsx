@@ -3,6 +3,8 @@ import { Quicksand } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { APP_DESCRIPTION, APP_NAME } from "@/lib/constant";
+import Footer from "@/components/Footer";
+
 // import { ThemeProvider } from "@/lib/provider";
 
 const font = Quicksand({
@@ -34,7 +36,8 @@ export default function RootLayout({
         > */}
         <Header />
         {/* <div className="md:pb-36 pb-10 flex-1 max-w-7xl lg:mx-auto md:px-10 px-3 w-full"> */}
-        <div className="pt-[90px]">{children}</div>
+        <div className="pt-[90px] scroll-smooth">{children}</div>
+        <Footer />
         {/* </div> */}
         {/* </ThemeProvider> */}
       </body>
