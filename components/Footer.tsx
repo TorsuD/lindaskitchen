@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   // date
@@ -15,26 +16,25 @@ export default function Footer() {
       )}
     >
       <div className="flex flex-col gap-4 text-sm">
-        <div>Copyright. All rights reserved.</div>
-        <p className="text-lg md:text-2xl text-[var(--main-color-secondary)]">
-          Linda&apos;s Kitchen.
-        </p>
-
-        <div className="flex items-center justify-center">
-          <Image
-            src={"/svgs/instagram.svg"}
-            alt="insta"
-            height={200}
-            width={200}
-            className="h-[30px] w-[30px]"
-          />
+        <div className="flex flex-col gap-2 items-center justify-center">
+          <p>Check out our insta</p>
+          <Link
+            href={"https://www.instagram.com/lindas.kitchen.toronto/"}
+            target="__blank"
+          >
+            <Image
+              src={"/svgs/instagram.svg"}
+              alt="insta"
+              height={200}
+              width={200}
+              className="h-[30px] w-[30px]"
+            />
+          </Link>
         </div>
 
-        <div>
-          <p>{date?.getFullYear()}</p>
-        </div>
+        <div>Copyright - {date?.getFullYear()}. All rights reserved. </div>
 
-        <p className="opacity-10">Created by TorsuD</p>
+        <p className="opacity-30">Created by TorsuD</p>
       </div>
 
       <div className="z-40">

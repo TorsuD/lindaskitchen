@@ -2,7 +2,7 @@ import AdinkraSymbols from "@/components/Adinkra";
 
 export default function About() {
   return (
-    <div className="relative mt-10 md:pb-36 pb-10 flex-1 max-w-7xl lg:mx-auto md:px-10 px-3 w-full">
+    <div className="relative mt-10 md:pb-36 pb-10 flex-1 h-[90vh] max-w-7xl lg:mx-auto md:px-10 px-3 w-full">
       <div>
         <h1 className="header-font font-bold lg:text-6xl text-4xl">
           About{" "}
