@@ -1,4 +1,4 @@
-import CoreValues from "@/components/CoreValues";
+import FoodBanner from "@/components/FoodBanner";
 import LandingPage from "@/components/LandingPage";
 import StepsToOrder from "@/components/StepsToOrder";
 
@@ -7,7 +7,7 @@ export default function HomePage() {
     <main>
       <LandingPage />
       <StepsToOrder />
-      <CoreValues />
+      <FoodBanner />
     </main>
   );
 }
