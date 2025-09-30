@@ -40,14 +40,16 @@ export default function Footer() {
           src={"/svgs/mpatapo.svg"}
           alt="Gye nyame"
           width={900}
+          loading="lazy"
           height={900}
-          className="absolute top-[100px] rotate-45 -z-10 left-[0px]  overflow-clip h-[70px] w-[70px] lg:h-[200px] lg:w-[200px] object-contain"
+          className="absolute top-[100px] rotate-45 -z-10 left-[0px] overflow-clip h-[70px] w-[70px] lg:h-[200px] lg:w-[200px] object-contain"
         />
 
         <Image
           src={"/svgs/pempamsie.svg"}
           alt="Gye nyame"
           width={900}
+          loading="lazy"
           height={900}
           className="absolute top-[100px] rotate-12 -z-10 right-[0px]  overflow-clip h-[70px] w-[70px] lg:h-[200px] lg:w-[200px] object-contain"
         />
