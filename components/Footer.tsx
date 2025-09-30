@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -37,7 +39,7 @@ export default function Footer() {
 
       <div className="z-40">
         <Image
-          src={"/svgs/mpatapo.svg"}
+          src={"/svgs/Mpatapo.svg"}
           alt="Gye nyame"
           width={900}
           loading="lazy"
@@ -46,7 +48,7 @@ export default function Footer() {
         />
 
         <Image
-          src={"/svgs/pempamsie.svg"}
+          src={"/svgs/Pempamsie.svg"}
           alt="Gye nyame"
           width={900}
           loading="lazy"
