@@ -3,7 +3,6 @@
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
@@ -12,39 +11,40 @@ import {
 import { navItemsMobileView } from "@/lib/constant";
 import { useState } from "react";
 import Link from "next/link";
-// import ThemeSwitch from "./ThemeSwitcher";
+import { ArrowRight } from "lucide-react";
+import { Fade } from "react-awesome-reveal";
 
 type Props = {
   children: React.ReactNode;
   title: string;
-  description: string;
 };
 
-export default function SideDrawer({ children, title, description }: Props) {
+export default function SideDrawer({ children }: Props) {
   const [open, setOpen] = useState(false);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger>{children}</SheetTrigger>
-      <SheetContent className="bg-[var(--main-color)] text-white">
+      <SheetContent className=" text-[var(--main-color)]">
         <SheetHeader>
-          <SheetTitle className="text-white">{title}</SheetTitle>
-          <SheetDescription className="text-white">
-            {description}
-          </SheetDescription>
+          <SheetTitle className=" text-center text-[var(--main-color)] text-xl">
+            {/* {title} */}
+          </SheetTitle>
         </SheetHeader>
 
         <div className="px-5 flex flex-col gap-5 mt-5">
           {navItemsMobileView?.map((navitem) => {
             return (
-              <Link
-                key={navitem?.id}
-                href={navitem?.href}
-                className="text-4xl flex text-center items-center gap-3"
-                onClick={() => setOpen(false)}
-              >
-                {navitem?.name}
-              </Link>
+              <Fade key={navitem?.id}>
+                <Link
+                  href={navitem?.href}
+                  className="text-4xl flex text-center items-center gap-3"
+                  onClick={() => setOpen(false)}
+                >
+                  <ArrowRight size={30} />
+                  {navitem?.name}
+                </Link>
+              </Fade>
             );
           })}
         </div>

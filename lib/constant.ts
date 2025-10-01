@@ -37,6 +37,11 @@ export const navItemsMobileView = [
     name: "Order",
     href: "/order",
   },
+  {
+    id: 212,
+    name: "Extras",
+    href: "/food",
+  },
 ];
 
 export const stepsToOrder = [

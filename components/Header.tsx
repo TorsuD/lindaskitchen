@@ -3,7 +3,7 @@
 import { MenuIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import SideDrawer from "./SideDrawer";
-import { APP_DESCRIPTION, APP_NAME, navItems } from "@/lib/constant";
+import { navItems } from "@/lib/constant";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -62,7 +62,7 @@ export default function Header() {
 
         {/* SIDE DRAWER */}
         <div className="lg:hidden block">
-          <SideDrawer title={APP_NAME} description={APP_DESCRIPTION}>
+          <SideDrawer title={"Menu"}>
             <div className="backdrop-blur-3xl flex items-center justify-center h-12 w-12 rounded-full">
               <MenuIcon size={30} className="text-[var(--main-color)]" />
             </div>

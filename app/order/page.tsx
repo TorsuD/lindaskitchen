@@ -89,8 +89,8 @@ export default function Order() {
         </div>
         <div className="mt-4 flex items-center justify-center">
           <Link href={"/food"}>
-            <Button className="flex items-center bg-[var(--main-color)]">
-              See other meals <ArrowRight color="white" />
+            <Button className="flex items-center text-xl p-2 bg-[var(--main-color)]">
+              View 📸 of meals <ArrowRight color="white" />
             </Button>
           </Link>
         </div>
