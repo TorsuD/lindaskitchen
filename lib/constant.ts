@@ -5,6 +5,11 @@ export const APP_DESCRIPTION =
 
 export const navItems = [
   {
+    id: 190,
+    name: "Home",
+    href: "/",
+  },
+  {
     id: 110,
     name: "About",
     href: "/about",
@@ -13,11 +18,6 @@ export const navItems = [
     id: 111,
     name: "Menu",
     href: "/order",
-  },
-  {
-    id: 112,
-    name: "Contact",
-    href: "/contact",
   },
 ];
 
@@ -113,10 +113,6 @@ export const foodVideos = [
   {
     id: 106,
     src: "/videos/IMG_7125.MOV",
-  },
-  {
-    id: 107,
-    src: "/videos/IMG_7126.MOV",
   },
   {
     id: 108,

@@ -3,7 +3,7 @@
 import AdinkraSymbols from "@/components/Adinkra";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { EyeIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -56,11 +56,11 @@ export default function Order() {
               </div>
 
               <div className="flex flex-col">
-                <h1 className="text-xl text-[var(--main-color-secondary)] font-bold tracking-wider">
-                  Menu
+                <h1 className="text-xl flex gap-2 items-center text-[var(--main-color-secondary)] text-left font-bold tracking-wider">
+                  Menu <ArrowRight size={20} />
                 </h1>
-                <p className="text-sm text-white header-font">
-                  List of foods available for purchase
+                <p className="text-sm tracking-wide text-white header-font">
+                  Tap to see our menu and list of foods
                 </p>
               </div>
 
@@ -84,11 +84,13 @@ export default function Order() {
           </DialogContent>
         </Dialog>
 
+        <div className="my-10">
+          <hr />
+        </div>
         <div className="mt-4 flex items-center justify-center">
           <Link href={"/food"}>
-            <Button className="flex items-center">
-              View Photos of foods we have cooked before{" "}
-              <EyeIcon color="var(--main-color-secondary)" />
+            <Button className="flex items-center bg-[var(--main-color)]">
+              See other meals <ArrowRight color="white" />
             </Button>
           </Link>
         </div>
