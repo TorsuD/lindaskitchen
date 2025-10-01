@@ -1,7 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { ChevronLeft, Eye } from "lucide-react";
+import { Eye } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
