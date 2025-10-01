@@ -1,9 +1,12 @@
 "use client";
 
 import AdinkraSymbols from "@/components/Adinkra";
+import { Button } from "@/components/ui/button";
 import { useDialog } from "@/lib/hooks/useDialog";
 import { cn } from "@/lib/utils";
+import { EyeIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Menu() {
   const dialogBody = (
@@ -53,7 +56,31 @@ export default function Menu() {
               List of foods available for purchase
             </p>
           </div>
+
           <AdinkraSymbols />
+        </div>
+        <div className="mt-4 flex items-center justify-center">
+          <Link href={"/food"}>
+            <Button className="flex items-center">
+              View Photos of foods we have cooked before{" "}
+              <EyeIcon color="var(--main-color-secondary)" />
+            </Button>
+          </Link>
+        </div>
+
+        <div className="mt-10">
+          <p className="text-black text-xl text-center">
+            Tap to call to place an order
+          </p>
+
+          <div className="flex items-center justify-center text-xl ">
+            <a
+              href="tel:+17058082139"
+              className=" text-blue-600 hover:underline"
+            >
+              +1 (705) 808-2139
+            </a>
+          </div>
         </div>
       </div>
     </div>

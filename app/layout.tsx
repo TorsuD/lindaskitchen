@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { APP_DESCRIPTION, APP_NAME } from "@/lib/constant";
 import Footer from "@/components/Footer";
+import ScrollUpButton from "@/components/ScrollUpButton";
 
 // import { ThemeProvider } from "@/lib/provider";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
           disableTransitionOnChange
         > */}
         <Header />
+        <ScrollUpButton />
         {/* <div className="md:pb-36 pb-10 flex-1 max-w-7xl lg:mx-auto md:px-10 px-3 w-full"> */}
         <div className="pt-[90px] scroll-smooth">{children}</div>
         <Footer />

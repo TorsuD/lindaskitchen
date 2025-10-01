@@ -171,3 +171,7 @@
 .bounce-up-down {
   animation: bounce-up-down 2s ease-in-out infinite;
 }
+
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}

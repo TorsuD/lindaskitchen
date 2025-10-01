@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import AdinkraSymbols from "./Adinkra";
 import Image from "next/image";
-import jollof from "@/public/food/jollof.png";
+import waakye from "@/public/food/waakye.png";
 import rice from "@/public/food/rice-and-stew.png";
 import { useRouter } from "next/navigation";
 
@@ -23,7 +23,7 @@ export default function LandingPage() {
         </p>
 
         <Button
-          onClick={() => router.push("/menu")}
+          onClick={() => router.push("/order")}
           className="rounded-4xl text-xl h-14 w-[200px] cursor-pointer"
           size={"lg"}
         >
@@ -36,12 +36,12 @@ export default function LandingPage() {
       </div>
 
       <Image
-        src={jollof}
-        alt="Jollof rice"
+        src={waakye}
+        alt="Waakye"
         width={900}
         height={900}
         priority
-        className="absolute top-[-300px]  z-10 left-[-100px] overflow-hidden  h-[550px] w-[550px] object-contain lg:top-[-290px]"
+        className="absolute top-[-310px] z-10 left-[-100px] overflow-hidden h-[550px] w-[550px] object-contain lg:top-[-270px]"
       />
 
       <Image
@@ -50,7 +50,7 @@ export default function LandingPage() {
         width={900}
         height={900}
         priority
-        className="absolute  bottom-[-250px] overflow-hidden z-10 right-[2px] h-[500px] w-[500px] object-contain"
+        className="absolute bottom-[-180px]  lg:bottom-[-250px] overflow-hidden z-10 right-[2px] h-[350px] w-[350px] lg:h-[500px] lg:w-[500px] object-contain"
       />
     </div>
   );
