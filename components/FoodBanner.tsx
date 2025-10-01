@@ -51,9 +51,9 @@ export default function FoodBanner() {
                 </span>
               </div>
 
-              <div className="flex items-center justify-center mt-5">
+              <div className="flex items-center justify-center mt-10">
                 <Button
-                  className=" rounded-4xl text-xl h-14 w-[200px] cursor-pointer"
+                  className=" rounded-2xl text-xl h-14 w-[200px] cursor-pointer"
                   size={"lg"}
                   onClick={() => router.push("/order")}
                 >

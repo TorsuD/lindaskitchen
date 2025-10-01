@@ -24,7 +24,7 @@ export default function LandingPage() {
 
         <Button
           onClick={() => router.push("/order")}
-          className="rounded-4xl text-xl h-14 w-[200px] cursor-pointer"
+          className="rounded-2xl text-xl h-14 w-[200px] cursor-pointer"
           size={"lg"}
         >
           View Menu <ArrowRight color="var(--main-color-secondary)" />
