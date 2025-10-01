@@ -34,7 +34,7 @@ export const navItemsMobileView = [
   },
   {
     id: 211,
-    name: "Menu",
+    name: "Order",
     href: "/order",
   },
 ];

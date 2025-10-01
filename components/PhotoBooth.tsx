@@ -1,47 +1,20 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { ArrowRight, ChevronLeft, ChevronRight, Eye } from "lucide-react";
+import { ChevronLeft, ChevronRight, Eye } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
+import { foodPhotos } from "@/lib/constant";
 
 export default function PhotoBooth() {
-  const foodPhotos = [
-    {
-      id: 1,
-      src: "/photo_7.jpg",
-      title: "beans",
-    },
-    {
-      id: 2,
-      src: "/photo_2.jpg",
-      title: "beans",
-    },
-    {
-      id: 3,
-      src: "/photo_3.jpg",
-      title: "beans",
-    },
-    {
-      id: 4,
-      src: "/photo_4.jpg",
-      title: "beans",
-    },
-    {
-      id: 5,
-      src: "/photo_5.jpg",
-      title: "beans",
-    },
-  ];
-
   const router = useRouter();
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
-    const amount = 345;
+    const amount = 360;
     scrollRef.current.scrollBy({
       left: direction === "left" ? -amount : amount,
       behavior: "smooth",
@@ -71,7 +44,7 @@ export default function PhotoBooth() {
 
           <div
             ref={scrollRef}
-            className="flex items-center overflow-scroll no-scroll gap-5"
+            className="flex items-center overflow-scroll no-scroll gap-3"
           >
             {foodPhotos?.map((food) => (
               <Image
@@ -80,7 +53,7 @@ export default function PhotoBooth() {
                 alt="food"
                 height={900}
                 width={900}
-                className="h-[400px] bg-green-200 shadow-sm w-[400px] shrink-0  object-contain rounded-2xl "
+                className="h-[350px] bg-green-200 shadow-sm w-[350px] shrink-0  object-contain rounded-2xl "
               />
             ))}
           </div>
@@ -88,8 +61,8 @@ export default function PhotoBooth() {
           <button
             onClick={() => scroll("right")}
             className={cn(
-              "absolute block",
-              "right-[-10px] top-1/2 -translate-y-1/2 z-10 bg-[var(--main-color)] text-white p-2 rounded-full"
+              "absolute block bg-[var(--main-color)] text-white p-2",
+              "right-[-10px] top-1/2 -translate-y-1/2 z-10 rounded-full"
             )}
           >
             <ChevronRight size={24} />
@@ -98,11 +71,11 @@ export default function PhotoBooth() {
 
         <div className="mt-5 flex items-center justify-center w-full">
           <Button
-            className=" rounded-4xl text-xl h-14 w-[200px] cursor-pointer"
+            className=" rounded-4xl text-xl h-14 w-[250px] cursor-pointer"
             size={"lg"}
             onClick={() => router.push("/food")}
           >
-            View More <Eye color="var(--main-color-secondary)" />
+            View More Food <Eye color="var(--main-color-secondary)" />
           </Button>
         </div>
       </div>

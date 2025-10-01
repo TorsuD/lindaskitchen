@@ -31,7 +31,7 @@ export default function Order() {
   );
 
   return (
-    <div className="grid place-items-center h-[90vh] p-2">
+    <div className=" relative grid place-items-center h-[90vh] p-2">
       <div className="text-sm text-[var(--main-color-secondary)]">
         <Dialog>
           <DialogTrigger>
@@ -64,7 +64,9 @@ export default function Order() {
                 </p>
               </div>
 
-              <AdinkraSymbols />
+              <div className="-z-10">
+                <AdinkraSymbols />
+              </div>
             </div>
           </DialogTrigger>
 
