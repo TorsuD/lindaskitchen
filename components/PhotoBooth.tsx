@@ -22,18 +22,18 @@ export default function PhotoBooth() {
         <div className="relative p-1">
           <div
             // ref={scrollRef}
-            className="flex items-center overflow-scroll no-scroll gap-3"
+            className="flex items-center justify-center overflow-scroll no-scroll gap-3"
           >
-            {foodPhotos?.map((food) => (
-              <Image
-                key={food.id}
-                src={food?.src}
-                alt="food"
-                height={900}
-                width={900}
-                className="h-[250px] bg-green-200 shadow-sm w-[250px] shrink-0  object-contain   rounded-2xl "
-              />
-            ))}
+            {/* {foodPhotos?.map((food) => ( */}
+            <Image
+              // key={food.id}
+              src={"/menu.jpg"}
+              alt="food"
+              height={900}
+              width={900}
+              className="ww-full bg-green-200 shadow-sm shrink-0  object-contain   rounded-2xl "
+            />
+            {/* ))} */}
           </div>
         </div>
 
