@@ -4,7 +4,7 @@ import { Eye } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
-import { foodPhotos } from "@/lib/constant";
+// import { foodPhotos } from "@/lib/constant";
 
 export default function PhotoBooth() {
   const router = useRouter();
@@ -31,7 +31,7 @@ export default function PhotoBooth() {
               alt="food"
               height={900}
               width={900}
-              className="ww-full bg-green-200 shadow-sm shrink-0  object-contain   rounded-2xl "
+              className="w-full bg-green-200 shadow-sm shrink-0  object-contain   rounded-2xl "
             />
             {/* ))} */}
           </div>
